@@ -1,0 +1,27 @@
+﻿<Window x:Class="WPFApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Codex Scribe" Height="500" Width="800"
+        Background="#FF2D2D30">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Margin="10" Text="Select the root directory of your codebase:" Foreground="White"/>
+        <Button x:Name="btnSelectFolder" Content="Select Folder" Click="BtnSelectFolder_Click" Grid.Row="1" Margin="10" Background="#FF3F3F41" Foreground="White" Height="30"/>
+        <TextBox x:Name="txtSelectedFolder" Grid.Row="2" Margin="10" Background="#FF3F3F41" Foreground="White"/>
+        <TextBlock Grid.Row="3" Margin="10" Text="Enter the file extensions to include (comma separated):" Foreground="White"/>
+        <TextBox x:Name="txtFileExtensions" Grid.Row="4" Margin="10" Background="#FF3F3F41" Foreground="White" Text=".cs"/>
+        <Button x:Name="btnStart" Content="Start" Click="BtnStart_Click" Grid.Row="5" Margin="10" Background="#FF3F3F41" Foreground="White" Height="50"/>
+        <TextBox x:Name="txtOutput" Grid.Row="6" Margin="10" IsReadOnly="True" TextWrapping="Wrap" ScrollViewer.VerticalScrollBarVisibility="Auto" Background="#FF3F3F41" Foreground="White"/>
+        <Button x:Name="btnCopyToClipboard" Content="Copy to Clipboard" Click="BtnCopyToClipboard_Click" Grid.Row="7" Margin="10" Background="#FF3F3F41" Foreground="White" Height="30"/>
+    </Grid>
+</Window>
